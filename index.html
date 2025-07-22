@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红薯条库存管理系统</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>红薯条库存管理系统</h1>
+</header>
+
+<nav>
+    <a href="#home">首页</a>
+    <a href="#about">关于我们</a>
+    <a href="#services">服务</a>
+    <a href="#contact">联系我们</a>
+</nav>
+
+<div class="content">
+  inventory_system add_batch(
+        production_date=today - datetime timedelta(days=5),
+        expiry_date=today + datetime timedelta(days=20),
+        quantity=50,
+        price_per_unit=16 00
+    )
+    
+    # 查看库存
+    print("\n初始库存:")
+    inventory_system view_inventory()
+    
+    # 模拟销售
+    inventory_system update_quantity("SPF-0001", -20)  # 销售20单位
+    inventory_system update_quantity("SPF-0002", 10)    # 补货10单位
+    
+    # 生成报告
+    print("\n更新后的库存报告:")
+    inventory_system generate_report()
+    
+    # 模拟过期批次处理（假设今天就是到期日）
+    print("\n处理过期批次:")
+    inventory_system remove_expired_batches(today + datetime timedelta(days=20))  # 实际不会删除
+    inventory_system remove_expired_batches(today + datetime timedelta(days=21))  # 会删除第二个批次
+    inventory_system generate_report()
+
+
+
+
+
+</p>
+  
+</div>
+
+<footer>
+    <p>版权所有 &copy; 2025 我的网站</p>
+</footer>
+<div style="display:none"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"Je6xEfFUsfQ6cplX",ck:"Je6xEfFUsfQ6cplX"})</script></div>
+</body>
+</html>
