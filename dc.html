@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红薯条库存管理系统</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>红薯条库存管理系统</h1>
+</header>
+
+<nav>
+    <a href="#home">首页</a>
+    <a href="#about">关于我们</a>
+    <a href="#services">服务</a>
+    <a href="#contact">联系我们</a>
+</nav>
+
+<div class="content">
+ new_quantity = self inventory[batch_id]['quantity'] + quantity_change
+        if new_quantity < 0:
+            print("错误：库存不足，无法完成销售")
+            return False
+        
+        self inventory[batch_id]['quantity'] = new_quantity
+        action = "补货" if quantity_change > 0 else "销售"
+        print(f"批次 {batch_id} 已 {action} {abs(quantity_change)} 单位，当前库存: {new_quantity}")
+        return True
+    
+    def remove_expired_batches(self, current_date=None):
+        """删除过期批次"""
+        if current_date is None:
+            current_date = datetime date today()
+        
+        expired_batches = []
+        for batch_id, info in self inventory items():
+            if info['expiry_date'] < current_date:
+                expired_batches append(batch_id)
+        
+        if not expired_batches:
+            print("没有找到过期批次")
+            return
+
+
+</p>
+  
+</div>
+
+<footer>
+    <p>版权所有 &copy; 2025 我的网站</p>
+</footer>
+<div style="display:none"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"Je6xEfFUsfQ6cplX",ck:"Je6xEfFUsfQ6cplX"})</script></div>
+</body>
+</html>
